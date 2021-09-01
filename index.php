@@ -28,7 +28,7 @@ include 'connection_db.php';
     </form>
 
     <div class="upload_btn">
-        <button id="btn_charged" value="Upload File" name="submit">Caric stu file</button>
+        <button id="btn_charged" value="Upload File" name="submit">Carica file</button>
     </div>
 
 

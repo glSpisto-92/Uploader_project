@@ -12,10 +12,11 @@ $path_size /= (1024 * 1024);
 $ext = pathinfo($path, PATHINFO_EXTENSION);
 
 
-if ($ext == 'docx' || $ext == 'pdf' || $ext == 'xslx') {
-    var_dump($ext);
+if ($ext == 'docx' || $ext == 'pdf' || $ext == 'xlsx') {
+    // var_dump($ext);
+    var_dump('Il file è stato caricato correttamente!');
 } else {
-    echo 'hai caricato un file errato! I formati accettati sono pdf, word, excel';
+    echo 'hai caricato un formato file non supportato! I formati accettati sono pdf, word, excel';
     exit;
 }
 

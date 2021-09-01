@@ -4,7 +4,7 @@ $('#btn_charged').click(function () {
     var formData = new FormData(form);
 
     var input = document.getElementById('fileToUpload');
-    if (!input.files) { // This is VERY unlikely, browser support is near-universal
+    if (!input.files) {
         console.error("This browser doesn't seem to support the `files` property of file inputs.");
     } else if (!input.files[0]) {
 
@@ -15,7 +15,7 @@ $('#btn_charged').click(function () {
     var sizeFile = file.size / (1024 * 1024);
 
     if (sizeFile > 5) {
-        alert('il file che stai provando a caricare è troppo grande');
+        alert('il file che stai provando a caricare è più grande di 5MB!');
     } else {
         $.ajax({
             contentType: false,
