@@ -2,7 +2,7 @@
 include 'connection_db.php';
 
 if (empty($_FILES["fileToUpload"]["tmp_name"])) {
-    echo 'non hai caricato nulla!';
+    echo 'non hai caricato nessun file!';
     exit;
 }
 
@@ -15,7 +15,7 @@ $ext = pathinfo($path, PATHINFO_EXTENSION);
 if ($ext == 'docx' || $ext == 'pdf' || $ext == 'xslx') {
     var_dump($ext);
 } else {
-    echo 'e sbagliat a carica!';
+    echo 'hai caricato un file errato! I formati accettati sono pdf, word, excel';
     exit;
 }
 

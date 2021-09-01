@@ -7,16 +7,15 @@ $('#btn_charged').click(function () {
     if (!input.files) { // This is VERY unlikely, browser support is near-universal
         console.error("This browser doesn't seem to support the `files` property of file inputs.");
     } else if (!input.files[0]) {
-        // alert("Please select a file before clicking 'Load'");
+
     } else {
         var file = input.files[0];
-        // alert("File " + file.name + " is " + file.size + " bytes in size");
     }
 
     var sizeFile = file.size / (1024 * 1024);
 
     if (sizeFile > 5) {
-        alert('il file è troppo grande');
+        alert('il file che stai provando a caricare è troppo grande');
     } else {
         $.ajax({
             contentType: false,
