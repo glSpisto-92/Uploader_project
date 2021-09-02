@@ -11,10 +11,11 @@ require_once('../connection_db.php');
 $email = $_POST['email'];
 $username = $_POST['username'];
 $password = $_POST['password'];
+$hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-$sql = "INSERT INTO users (email, username, password) VALUES ('$email','$username','$password')";
+$sql = "INSERT INTO users (email, username, password) VALUES ('$email','$username','$hashed_password')";
 
-if ($db->query($sql) === true) {
+if ($db->query($sql)) {
     echo 'Registrazione effettuata con successo';
 } else {
     echo 'Qualcosa è andato storto!';

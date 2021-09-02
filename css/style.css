@@ -3,16 +3,17 @@
     margin: 20px 0;
 }
 
-.header_views{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .wrapper{
     display: flex;
     justify-content: center;
     padding: 30px;
+    background-color: lightgray;
+}
+
+.header_views{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .form_register{
@@ -23,3 +24,4 @@
 input{
     width: 300px;
 }
+
