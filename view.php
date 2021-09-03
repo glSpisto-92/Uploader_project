@@ -25,7 +25,7 @@ $result = $pdo_statement->fetchAll();
     <div class="container">
         <div class="header_views">
             <h1 class="mt-3 mb-4">I tuoi file</h1>
-            <button class="btn btn-warning"><a href="">Scarica tutti i file <i class="fas fa-download"></i></a></button>
+            <button class="btn btn-warning"><a href="folder.zip">Scarica tutti i file <i class="fas fa-download"></i></a></button>
             <button class="btn btn-secondary"><a href="index.php">Torna alla home</a></button>
         </div>
 
