@@ -1,5 +1,26 @@
 <?php
-include 'connection_db.php';
+$root = '.';
+
+$output = $root . '\\folder.zip';
+
+$inputDir = './file_salvati';
+
+$input = array_diff(scandir($inputDir), array('..', '.'));
+if (file_exists($output))
+    unlink($output);
+$zip = new ZipArchive;
+
+if ($zip->open($output, ZipArchive::CREATE) == TRUE) {
+    foreach ($input as $file) {
+        $splittedFileName = explode('.', $file);
+        $zip->addFile($inputDir . '\\' . $file, rand(1, 10000) . '.' . $splittedFileName[count($splittedFileName) - 1]);
+    }
+    // $zip->close();
+    // if (file_exists($output))
+    //     echo "Il file esiste";
+    // else
+    //     echo "Il file NON esiste";
+}
 ?>
 
 <!DOCTYPE html>
